@@ -1,0 +1,37 @@
+/* complete body */
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+/* whole header  */
+header {
+  background-color: blueviolet;
+  padding: 50px 200px;
+}
+/* navigation bar */
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+/* navigation bar links */
+nav a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  margin-right: 20px;
+}
+/* "watch live" link */
+.banner-title a {
+  text-decoration: none;
+  color: rgb(251, 253, 132);
+}
+/* footer */
+footer {
+  text-align: center;
+}
+/* mobile responsive media query*/
+@media screen and (max-width: 480px) {
+}
+/* tablet responsive media query */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+}
