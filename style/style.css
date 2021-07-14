@@ -138,6 +138,68 @@ figcaption h2 {
   width: 80%;
   padding-left: 50px;
 }
+hr {
+  visibility: hidden;
+}
+/* interactive formation seletion section */
+.formation {
+  width: 50%;
+  margin: auto;
+  font-size: 1.5em;
+}
+.green {
+  color: darkgreen;
+  text-align: center;
+  font-size: 3em;
+}
+.formation img {
+  display: none;
+}
+.formation-selection div {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(150, 243, 132);
+  margin-top: 20px;
+  border-radius: 30px;
+  padding: 10px;
+}
+.f343:hover img {
+  display: inline;
+  width: 50%;
+}
+.f433:hover img {
+  display: inline;
+  width: 50%;
+}
+.f442:hover img {
+  display: inline;
+  width: 50%;
+}
+.f3331:hover img {
+  display: inline;
+  width: 50%;
+}
+.f3511:hover img {
+  display: inline;
+  width: 50%;
+}
+.f4222:hover img {
+  display: inline;
+  width: 50%;
+}
+.f4231:hover img {
+  display: inline;
+  width: 50%;
+}
+.f4321:hover img {
+  display: inline;
+  width: 50%;
+}
+.f41212:hover img {
+  display: inline;
+  width: 50%;
+}
+
 /* footer */
 .footer {
   width: 100%;
@@ -201,6 +263,14 @@ figcaption h2 {
   .banner-football {
     display: none;
   }
+  hr {
+    visibility: visible;
+    border-top: 2px solid blue;
+  }
+  /* formation responsive  */
+  .formation {
+    width: 90%;
+  }
 }
 /* tablet responsive media query */
 @media screen and (min-width: 689px) and (max-width: 992px) {
@@ -235,5 +305,13 @@ figcaption h2 {
   /* no football transition in mobile */
   .banner-football {
     display: none;
+  }
+  hr {
+    visibility: visible;
+    border-top: 2px solid blue;
+  }
+  /* formation responsive */
+  .formation {
+    width: 75%;
   }
 }
