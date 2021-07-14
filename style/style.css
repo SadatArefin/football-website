@@ -7,7 +7,9 @@ body {
 /* whole header  */
 header {
   background-color: blueviolet;
-  padding: 50px 200px;
+  padding-top: 42px;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 /* navigation bar */
 .nav {
@@ -15,23 +17,122 @@ header {
   justify-content: space-between;
 }
 /* navigation bar links */
+.menu {
+  display: none;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+}
 nav a {
   text-decoration: none;
   color: rgb(255, 255, 255);
   margin-right: 20px;
 }
+.login {
+  background-color: rgb(243, 61, 158);
+  padding: 5px;
+  width: 118px;
+  height: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.login img {
+  max-width: 24px;
+  max-height: 24px;
+}
+.banner {
+  display: flex;
+  justify-content: space-between;
+}
+.banner-title {
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+.banner-title h1 {
+  font-size: 64px;
+  line-height: 80px;
+}
+.watch-live {
+  background-color: rgb(243, 61, 158);
+  padding: 10px 20px;
+}
 /* "watch live" link */
-.banner-title a {
+.watch-live a {
   text-decoration: none;
   color: rgb(251, 253, 132);
+}
+
+.best-players {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.player {
+  background-color: rgba(137, 43, 226, 0.503);
+  max-width: 350px;
+  min-width: 180px;
+  padding: 10px;
+}
+.player img {
+  width: 100%;
+}
+figcaption {
+  text-align: center;
+}
+figcaption h2 {
+  font-size: 28px;
 }
 /* footer */
 footer {
   text-align: center;
 }
 /* mobile responsive media query*/
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 520px) {
+  .banner {
+    flex-direction: column;
+  }
+  .best-players {
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: 0.1%;
+    margin-right: 0.1%;
+  }
+  .player {
+    max-width: 400px;
+  }
+  .menu {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+  }
+  .nav-link-container:hover,
+  .nav-link-container:active .nav-links {
+    display: block;
+    position: absolute;
+  }
 }
 /* tablet responsive media query */
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media screen and (min-width: 521px) and (max-width: 1010px) {
+  .banner {
+    flex-direction: column;
+  }
+  .best-players {
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .menu {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+  }
+  .nav-link-container:hover,
+  .nav-link-container:active .nav-links {
+    display: block;
+    position: absolute;
+  }
 }
