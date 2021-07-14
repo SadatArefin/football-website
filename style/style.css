@@ -25,10 +25,12 @@ nav ul {
   display: flex;
 }
 nav a {
+  font-weight: bold;
   text-decoration: none;
   color: rgb(255, 255, 255);
   margin-right: 20px;
 }
+/* login button  */
 .login {
   background-color: rgb(243, 61, 158);
   padding: 5px;
@@ -42,43 +44,72 @@ nav a {
   max-width: 24px;
   max-height: 24px;
 }
+/* header part after nav */
 .banner {
   display: flex;
   justify-content: space-between;
 }
 .banner-title {
   margin-top: 120px;
-  margin-bottom: 120px;
+  margin-bottom: 180px;
 }
 .banner-title h1 {
   font-size: 64px;
   line-height: 80px;
 }
+/* football image */
+.banner-football {
+  width: 90px;
+  height: 90px;
+  z-index: 1;
+  position: relative;
+  bottom: 300px;
+  left: 50px;
+}
+/* football image transition and transform effect */
+.banner-image:hover .banner-football {
+  transform: scale(1.5) translate(-200px, -80px);
+  transition: 2s transform;
+}
+/* watch live button transition effect */
 .watch-live {
   background-color: rgb(243, 61, 158);
+  font-weight: 200;
   padding: 10px 20px;
+}
+.watch-live:hover {
+  background-color: rgb(255, 9, 91);
+  font-weight: 700;
+  transition-duration: 1s;
 }
 /* "watch live" link */
 .watch-live a {
   text-decoration: none;
   color: rgb(251, 253, 132);
 }
-
+/* player cards section */
 .best-players {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   margin-left: 10%;
   margin-right: 10%;
 }
+/* each player card  */
 .player {
   background-color: rgba(137, 43, 226, 0.503);
   max-width: 350px;
   min-width: 180px;
   padding: 10px;
 }
+.player:hover {
+  background-color: rgb(197, 6, 255);
+}
+/* player card image part  */
 .player img {
   width: 100%;
 }
+/* player card text part  */
 figcaption {
   text-align: center;
 }
@@ -86,22 +117,47 @@ figcaption h2 {
   font-size: 28px;
 }
 /* footer */
-footer {
-  text-align: center;
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+/* footer logo positioning */
+.footer-header {
+  height: 110px;
+}
+/* the footer logo  */
+.footer-header img {
+  height: 100%;
+}
+/* social media icons */
+.social-icons img {
+  width: 32px;
+  padding-bottom: 32px;
 }
 /* mobile responsive media query*/
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 688px) {
+  /* header image and text */
   .banner {
     flex-direction: column;
   }
+  /* 1 player per row */
   .best-players {
     grid-template-columns: repeat(1, 1fr);
-    margin-left: 0.1%;
-    margin-right: 0.1%;
+    grid-template-rows: repeat(12, 1fr);
+    margin-left: 7%;
+    margin-right: 1%;
   }
+
   .player {
     max-width: 400px;
   }
+
+  /* responsive navbar */
   .menu {
     display: block;
   }
@@ -112,27 +168,38 @@ footer {
   .nav-link-container:active .nav-links {
     display: block;
     position: absolute;
+  }
+  /* no fancy football transition */
+  .banner-football {
+    display: none;
   }
 }
 /* tablet responsive media query */
-@media screen and (min-width: 521px) and (max-width: 1010px) {
+@media screen and (min-width: 689px) and (max-width: 992px) {
+  /* header image and text */
   .banner {
     flex-direction: column;
   }
+  /* 2 per row */
   .best-players {
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     margin-left: 5%;
     margin-right: 5%;
   }
+  /* navbar responsive */
   .menu {
     display: block;
   }
   .nav-links {
     display: none;
   }
-  .nav-link-container:hover,
-  .nav-link-container:active .nav-links {
+  .nav-link-container:hover .nav-links {
     display: block;
     position: absolute;
+  }
+  /* no football transition in mobile */
+  .banner-football {
+    display: none;
   }
 }
