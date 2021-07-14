@@ -116,6 +116,28 @@ figcaption {
 figcaption h2 {
   font-size: 28px;
 }
+/* country about */
+.countries {
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+}
+.countries article {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+.countries section {
+  width: 50%;
+  text-align: justify;
+  font-size: 1.2em;
+}
+.countries img {
+  width: 80%;
+  padding-left: 50px;
+}
 /* footer */
 .footer {
   width: 100%;
@@ -169,6 +191,12 @@ figcaption h2 {
     display: block;
     position: absolute;
   }
+  .countries article {
+    flex-direction: column;
+  }
+  .countries section {
+    width: 90%;
+  }
   /* no fancy football transition */
   .banner-football {
     display: none;
@@ -197,6 +225,12 @@ figcaption h2 {
   .nav-link-container:hover .nav-links {
     display: block;
     position: absolute;
+  }
+  .countries article {
+    flex-direction: column;
+  }
+  .countries section {
+    width: 75%;
   }
   /* no football transition in mobile */
   .banner-football {
